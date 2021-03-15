@@ -72,18 +72,18 @@ RandomForestClassifier(criterion='entropy', max_depth=8, n_estimators=200)
 
 By using the GridSearchCV function, it takes a dict of all possible parameters in a for loop for getting the best parameters. If `n_jobs=-1` is given, the search can be done in parallel calculation which saves a lot of time in fitting hundreds of candidates/fits.
 
-So far, Logistic Regression and Random Forest model have the best score among these three models. Results of other models are to be determined. The current model has more than 85% of accuracy to predict new exoplanets.
+So far, *Logistic Regression and Random Forest models* have the best score among these three models. Results of other models are to be determined. The current model has more than 85% of accuracy to predict new exoplanets.
 
 ## Feature Selection
 
 ### Recursive Feature Elimination (RFE)
 
-After using Recursive Feature Elimination (RFE) for Logistic Regression, 20 features are considered less important to the model and got removed from the training data. 
+After using Recursive Feature Elimination (RFE) for Logistic Regression, **20 features are considered less important** to the model and got removed from the training data. 
 
-Results show that the RFE testing data score has 88.7% which is very similar to the original score (89.3%). It is obvious that RFE can reduce the complexity of this model, and accelerate the calculation while keeping a similar accuracy result.
+Results show that the **RFE testing data score has 88.7%** which is very similar to the **original score (89.3%)**. It is obvious that RFE can *reduce the complexity* of this model, and accelerate the calculation while keeping *a similar accuracy result*.
 
 ### .feature_importances_ (FI)
 
-Similar to RFE, `.feature_importances_` can provide the ranking of the important features. After sorting the list of feature importances, all 7 features with importance lower than 0.01 have been removed from the training data.
+Similar to RFE, `.feature_importances_` can provide the ranking of the important features. After sorting the list of feature importances, **all 7 features with importance lower than 0.01** have been removed from the training data.
 
-Results show that new training data with selected features gives 87.2% of accuracy while original data has 88.9% accuracy. They are pretty close, but not as close as RFE method.
+Results show that new training data with **selected features gives 87.2% of accuracy** while original data has **88.9% accuracy**. They are pretty close, but not as close as RFE method.
