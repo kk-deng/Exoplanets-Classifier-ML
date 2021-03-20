@@ -87,3 +87,11 @@ Results show that the **RFE testing data score has 88.7%** which is very similar
 Similar to RFE, `.feature_importances_` can provide the ranking of the important features. After sorting the list of feature importances, **all 7 features with importance lower than 0.01** have been removed from the training data.
 
 Results show that new training data with **selected features gives 87.2% of accuracy** while original data has **88.9% accuracy**. They are pretty close, but not as close as RFE method.
+
+* Feature Importances Ranking of Random Forest Model:
+
+<img src="https://github.com/kk-deng/Machine-Learning-Challenge/blob/main/image/model3_randomforest_featuresimportances.png">
+
+* Random Forest Model Classification Report:
+
+<img src="https://github.com/kk-deng/Machine-Learning-Challenge/blob/main/image/model3_randomforest_report.png">
